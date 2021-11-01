@@ -1,0 +1,761 @@
+/*! Fonts */
+
+@font-face {
+    font-family: "Sketch 3D";
+    src: url("/fonts/Sketch\ 3D.woff");
+}
+
+@font-face {
+    font-family: "Retro";
+    src: url("/fonts/RetroGaming.ttf");
+}
+
+@font-face {
+    font-family: "RobotoRegular";
+    src: url("/fonts/Roboto-Regular.ttf");
+}
+
+@font-face {
+    font-family: "RobotoLight";
+    src: url("/fonts/Roboto-Light.ttf");
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-image: url("../img/fondo.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* ! main contenedor */
+
+/* todo: Estilos Contenedor Principal */
+
+.contenedor{
+    margin-top:7em;
+    width: 80%;
+    height: 40em;
+    display: flex;
+    justify-content: center;
+}
+
+/* ! Contenedor navegación */
+
+/* todo: Estilos Navegación*/
+
+.nav{
+    position: relative;
+    top:25%;
+    left: -10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 290px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
+}
+
+.nav ul{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+}
+
+.nav ul li{
+    position: relative;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    list-style: none;
+    border-radius: 10px;
+    width: 70px;
+    height: 60px;
+}
+
+.nav ul li a:hover{
+    background-color: rgb(163, 70, 224);
+    border-radius: 6px;
+}
+
+.nav ul li a{
+    position: relative;
+    width: 100%;
+    text-decoration: none;
+    color: rgb(163, 70, 224);
+    font-weight: 500;
+}
+
+.nav ul li a .icono{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 60px;
+    text-align: center;
+    transition: 0.8s;
+}
+
+.nav ul li:hover a .icono{
+    color: #fff;
+}
+
+.nav ul li a .icono .fas{
+    font-size: 24px;
+    padding: 17px;
+    text-align: center;
+}
+
+.nav ul li a .nav__item{
+    position: absolute;
+    top: 0px;
+    left: 83px;
+    z-index: 111;
+    background-color:#fff;
+    width: auto;
+    padding:5px 10px;
+    font-weight: 700;
+    font-size: 20px;
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(-15%) translateX(0px);
+    border-radius: 6px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: 0.5s;
+}
+
+.nav ul li:hover a .nav__item{
+    transform: translateY(30%) translateX(10px);
+    visibility: visible;
+    opacity: 1;
+}
+
+.nav ul li a .nav__item::before{
+    content:"";
+    position: absolute;
+    top:44%;
+    left: -1px;
+    width: 12px;
+    height: 12px;
+    transform: rotate(45deg) translateX(-50%);
+    border-radius: 2px;
+    background-color: rgb(255, 255, 255);
+    
+}
+
+.icon-active{
+    background-color: rgb(163, 70, 224);
+    color: #fff;
+    border-radius: 6px;
+}
+
+/* ! Contenedor Presentacion */ 
+
+/* Todo: Estilos Contenedor Presentacion */
+
+.contenedor__presentacion{
+    position: relative;
+    top: -1.5em;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.774);
+    height: 43em;
+    width: 42em;
+}
+
+/* Todo: Estilos Foto */
+
+.contenedor__presentacion__img{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    width: 100%;
+    height: 20em;
+    background-image: url("../img/presentacionCabecera.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-bottom: 7px solid rgb(6, 235, 178);
+    clip-path: polygon(0 1%, 100% 0, 100% 74%, 75% 100%, 25% 100%, 0 75%);
+}
+
+.contenedor__foto{
+    position: absolute;
+    top: 14em;
+    width: 12em;
+    height: 10em;
+    background-image: url("../img/img.jpeg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 50% 50%;
+    border-bottom: 5px solid rgb(21, 22, 22);
+    z-index: 100;
+}
+
+/* Todo: Estilos Descripcion */
+
+.descripcion{
+    text-align: center;
+    margin-top: 5em;
+    color: rgb(6, 73, 56);
+}
+
+.descripcion h3{
+    font-size: 1.2rem;
+    margin: 5px;
+    color: rgb(17, 199, 153);
+}
+
+/* Todo: Estilos Social Liks */
+
+.social{
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 20em;
+    height: 4em;
+}
+
+.social__link{
+    display: flex;
+    text-decoration: none;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 2px 8px;
+    width: 100%;
+    height: 100%;
+    font-size: 1.3em;
+    color: rgb(22, 24, 23);
+}
+
+.social__link:hover{
+    transition: 0.4s;
+    color:rgb(9, 119, 106);
+    font-size: 2em;
+    box-shadow: rgba(20, 30, 20, 0.55) 0px 2px 8px;
+    background-color: rgba(110, 255, 207, 0.664);
+}
+
+/* ! Contenedor Contenidos */
+
+/* Todo: Estilos Contenedor Contenidos */
+
+.contenedor__contenido{
+    width: 0em;
+    height: 100%;
+    background-color: rgb(255, 255, 255);
+    transition: width .5s;
+    display: block;
+    overflow-x: hidden;
+}
+
+.contenedor__contenido-active{
+    width: 50em;
+    transition: width 1s;
+}
+
+/* ! Sección Proyectos */
+
+/* TODO: Estilos Videos */
+
+.videos{
+    display: flex;
+    width:100%;
+    min-height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.proyectosCabecera{
+    background-color: rgb(6, 113, 235);
+    width: 100%;
+    height: 14em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.proyectosCabecera > h1{
+    text-align: left; 
+    font-family: "Sketch 3D"; 
+    font-size: 60px; 
+    color: rgb(241, 43, 36); 
+    text-shadow: 0 1px 0 #ddd, 0 2px 0 #ccc, 0 3px 0 #bbb, 0 4px 0 #aaa, 0 5px 0 #acacac, 0 6px 1px rgba(0,0,0,0.1), 0 0 5px rgba(0,0,0,0.1), 0 1px 3px rgba(0,0,0,0.3), 0 3px 5px rgba(0,0,0,0.2), 0 5px 10px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.2), 0 20px 20px rgba(0,0,0,0.15);
+}
+
+.onda{
+    background-image: url("/img/wave.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 9em;
+}
+
+.video{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.video .titulo{
+    position:relative;
+    margin: 20px 0px 5px 8px;
+    color: rgb(19, 17, 17);
+    font-size: 2.2em;
+    padding: 0 10px;
+    font-weight: 500;
+    transform-origin: left;
+    transform: scaleX(0);
+    transition: 1s;
+    transition-delay: 0s;
+    font-family: "Retro";
+    opacity: 0;
+}
+
+.video .titulo-active{
+    transform: scaleX(1);
+    transition-delay: 0s;
+    opacity: 1;
+}
+
+.video .titulo-active::before{
+    transform: scaleX(0);
+    transition: 2s;
+}
+
+.video .titulo::before{
+    content: "";
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform-origin: right;
+    transition: .5s;
+    background-color: rgb(241, 43, 36);
+}
+
+.video .titulo:nth-child(2)::before{
+    background-color: rgb(6, 113, 235);
+}
+
+.video .titulo:nth-child(2){
+    margin-left: 10px;
+    margin-top: 5px;
+    font-weight: 300;
+    font-size: 1.5em;
+    letter-spacing: 2px;
+    display: inline-block;
+    font-family: "Retro";
+}
+
+.video .iframe{
+    display: block;
+    position: relative;
+    margin: 15px;
+    margin-bottom: 1em;
+    opacity: 0;
+    transition: .5s;
+    left: 100px;
+}
+
+.video .video-active{
+    left: 0px;
+    opacity: 1;
+}
+
+
+.video a{
+    font-size: 30px;
+    text-decoration: none;
+    color: rgb(6, 113, 235);
+    margin-bottom: 2em;
+}
+
+.video a:hover{
+    color: rgb(163, 70, 224);
+}
+
+/* ! Sección CV */
+
+/* TODO: Estilos Formación */
+
+.formacion{
+    padding: 20px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    min-height: 50vh;
+    background-color: rgb(51, 47, 47);
+}
+
+.divListas{
+    position: relative;
+}
+
+.formacion h1{
+    position: relative;
+    color: rgb(255, 255, 255);
+    font-weight: 500;
+    letter-spacing: 2px;
+    font-size: 30px;
+}
+
+.divListas strong{
+    color: #fff;
+    font-size: 19px;
+}
+
+.divListas ul{
+    position: relative;
+}
+
+.divListas ul li{
+    position: relative;
+    left: 0;
+    color: rgb(228, 243, 255);
+    list-style: none;
+    margin: 4px 0;
+    border-left: 5px solid rgb(45, 227, 243);
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.divListas ul li::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(45, 227, 243);
+    transform: scaleX(0);
+    transform-origin: left;
+    z-index: 1;
+    transition: 0.5s;
+}
+
+.divListas ul li:hover::before{
+    transform: scaleX(1);
+}
+
+.divListas ul li:hover{
+    left: 10px;
+}
+
+.divListas ul li span,strong{
+    position: relative;
+    padding: 8px;
+    display: inline-block;
+    z-index: 11;
+    transition: 0.5s;
+}
+
+.divListas ul li span{
+    font-size: 17px;
+}
+
+.divListas ul li:hover span{
+    color: #111;
+}
+
+.divListas ul li:hover strong{
+    color: rgb(0, 0, 0);
+}
+
+/* TODO: Estilos Habilidades */
+
+.habilidades{
+    padding-top: 3em;
+}
+
+.habilidades h1{
+    margin-top: 20px 0 20px 0;
+    text-align: center;
+    font-weight: 500;
+    letter-spacing: 2px;
+    font-size: 30px;
+}
+
+.tecnologias{
+
+    position: relative;
+    padding: 30px;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items:flex-start;
+    flex-direction: row;
+}
+
+.tecnologias h1{
+    width: 100%;
+}
+
+.tecnologias .carta{
+    position: relative;
+    width: 250px;
+    background: linear-gradient(0deg,#3b3c3d,rgb(28, 34, 32),#3b3c3d);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 280px;
+    border-radius: 4px;
+    text-align: center;
+    overflow: hidden;
+    margin-bottom: 40px;
+    transition: 0.5s;
+}
+
+.tecnologias .carta:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0,0,0,.5);
+}
+
+.tecnologias .carta::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -50%;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255,.3);
+    pointer-events: none;
+    z-index: 1;
+}
+
+.porcentaje{
+    position: relative;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    box-shadow: inset 0 0 50px #000;
+    background-color: #222;
+    z-index: 1000;
+}
+
+.porcentaje .numero{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+.porcentaje .numero h2{
+    color: rgb(163, 163, 163);
+    font-weight: 700;
+    font-size: 40px;
+    transition: 0.5s;
+}
+
+.carta:hover .porcentaje .numero h2{
+    color: rgb(255, 255, 255);
+    font-size: 60px;
+}
+
+.porcentaje .numero h2 span{
+    font-size: 24px;
+    color: rgb(163, 163, 163);
+    transition: .5s;
+}
+
+.carta:hover .porcentaje .numero h2 span{
+    color: rgb(255, 255, 255);
+}
+
+.texto{
+    position: relative;
+    color: rgb(163, 163, 163);
+    margin-top: 20px;
+    font-size: 18px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: 0.5s;
+}
+
+.carta:hover .texto{
+    color: rgb(255, 255, 255);
+    font-size: 25px;
+}
+
+svg{
+    position: relative;
+    width: 150px;
+    height: 150px;
+    z-index: 100;
+}
+
+svg circle{
+    width: 100%;
+    height: 100%;
+    fill: none;
+    stroke:rgba(214, 214, 214, 0.835);
+    stroke-width: 10;
+    stroke-linecap: round;
+    transform: translate(5px,5px);
+}
+
+svg circle:nth-child(2){
+    stroke-dasharray: 440;
+    stroke-dashoffset: 440;
+}
+
+.tecnologias0 .carta:nth-child(1) svg circle:nth-child(2){
+    stroke-dashoffset: calc(440 - (440 * 90) / 100);
+    stroke: rgb(255, 251, 0);
+}
+
+.tecnologias0 .carta:nth-child(2) svg circle:nth-child(2){
+    stroke-dashoffset: calc(440 - (440 * 70) / 100);
+    stroke: rgb(38, 255, 0);
+}
+
+.tecnologias0 .carta:nth-child(3) svg circle:nth-child(2){
+    stroke-dashoffset: calc(440 - (440 * 90) / 100);
+    stroke: rgb(255, 0, 0);
+}
+
+.tecnologias0 .carta:nth-child(4) svg circle:nth-child(2){
+    stroke-dashoffset: calc(440 - (440 * 80) / 100);
+    stroke: rgb(255, 0, 242);
+}
+
+.tecnologias0 .carta:nth-child(5) svg circle:nth-child(2){
+    stroke-dashoffset: calc(440 - (440 * 90) / 100);
+    stroke: rgb(35, 246, 246);
+}
+
+.tecnologias1 .carta:nth-child(1) svg circle:nth-child(2){
+    stroke-dashoffset: calc(440 - (440 * 90) / 100);
+    stroke: rgb(255, 251, 0);
+}
+
+.tecnologias1 .carta:nth-child(2) svg circle:nth-child(2){
+    stroke-dashoffset: calc(440 - (440 * 70) / 100);
+    stroke: rgb(38, 255, 0);
+}
+
+.tecnologias1 .carta:nth-child(3) svg circle:nth-child(2){
+    stroke-dashoffset: calc(440 - (440 * 90) / 100);
+    stroke: rgb(255, 0, 0);
+}
+
+.tecnologias1 .carta:nth-child(4) svg circle:nth-child(2){
+    stroke-dashoffset: calc(440 - (440 * 80) / 100);
+    stroke: rgb(255, 0, 242);
+}
+
+.tecnologias2 .carta:nth-child(1) svg circle:nth-child(2){
+    stroke-dashoffset: calc(440 - (440 * 90) / 100);
+    stroke: rgb(255, 251, 0);
+}
+
+.tecnologias2 .carta:nth-child(2) svg circle:nth-child(2){
+    stroke-dashoffset: calc(440 - (440 * 70) / 100);
+    stroke: rgb(38, 255, 0);
+}
+
+.tecnologias2 .carta:nth-child(3) svg circle:nth-child(2){
+    stroke-dashoffset: calc(440 - (440 * 90) / 100);
+    stroke: rgb(255, 0, 0);
+}
+
+.tecnologias3 .carta:nth-child(1) svg circle:nth-child(2){
+    stroke-dashoffset: calc(440 - (440 * 90) / 100);
+    stroke: rgb(255, 251, 0);
+}
+
+.tecnologias3 .carta:nth-child(2) svg circle:nth-child(2){
+    stroke-dashoffset: calc(440 - (440 * 70) / 100);
+    stroke: rgb(38, 255, 0);
+}
+
+.tecnologias3 .carta:nth-child(3) svg circle:nth-child(2){
+    stroke-dashoffset: calc(440 - (440 * 90) / 100);
+    stroke: rgb(255, 0, 0);
+}
+
+.tecnologias3 .carta:nth-child(4) svg circle:nth-child(2){
+    stroke-dashoffset: calc(440 - (440 * 80) / 100);
+    stroke: rgb(255, 0, 242);
+}
+
+.tecnologias3 .carta:nth-child(5) svg circle:nth-child(2){
+    stroke-dashoffset: calc(440 - (440 * 90) / 100);
+    stroke: rgb(35, 246, 246);
+}
+
+/* todo: estilos experiencia */
+
+.experiencia{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.experiencia{
+    background-color: rgb(51, 47, 47);
+}
+
+.experiencia h1{
+    padding: 17px;
+    font-size: 28px;
+    color: #fff;
+}
+
+.experiencia ul{
+    height: 100px;
+    margin-top: 10px;
+}
+
+.experiencia h2{
+    font-family: "RobotoLight";
+    color: #fff;
+    font-size: 20px;
+    margin-top: 30px;
+}
+
+.experiencia li{
+    list-style: none;
+    list-style-type: circle;
+    margin-top: 15px 0 0 10px;
+    font-size: 18px;
+    font-family: "RobotoLight";
+    color: #fff;
+}
+
+.experiencia a{
+    color: aqua;
+    text-decoration: none;
+    margin-bottom: 30px;
+    font-size: 25px;
+}
+
+
