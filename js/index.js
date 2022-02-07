@@ -420,7 +420,7 @@ function crearExperiencia(div){
     var ul = document.createElement("ul");
     var li1 = document.createElement("li");
     var li2 = document.createElement("li");
-    var btn = document.createElement("a") 
+    var btn = document.createElement("a");
 
     h1.textContent = "Experiencia";
     h2.textContent = "BeLocal – Convenio en prácticas (3 meses).";
@@ -438,6 +438,8 @@ function crearExperiencia(div){
     ul.appendChild(li1);
     ul.appendChild(li2);
 
+    experiencia.appendChild(btn);
+    div.appendChild(experiencia);
 
 }
 
@@ -445,14 +447,19 @@ function crearSobreMi(div){
     var h1 = document.createElement("h1");
     var p1 = document.createElement("p");
     var p2 = document.createElement("p");
+    var fieldset = document.createElement("fieldset");
+    var legend = document.createElement("legend");
+
     h1.textContent = "Sobre mi";
     p1.textContent = "Mi meta en el mundo laboral es llegar a ser un buen programador de videojuegos. No tengo inconvenientes en formarme en otros campos de la informática para llegar a mi objetivo final. En mi opinión, lo importante es estar en constante crecimiento personal, por eso me fijo metas como hacer pequeños proyectos o dedicar parte del tiempo a seguir aprendiendo inglés.";
 
     p2.textContent = "Ahora hablando sobre quién soy, de manera más personal, podría decir que me dejo mecer fácilmente por el poder de la imaginación. A menudo me quedo en babia pensando en mundos de fantasía o en lugares remotos del mundo real. Por este motivo es que entre mis hobbies favoritos están jugar videojuegos y ver anime. También disfruto muchísimo una buena caminata o visitar lugares nuevos si estoy en buena compañía.";
 
-    div.appendChild(h1);
-    div.appendChild(p1);
-    div.appendChild(p2);
+    legend.appendChild(h1);
+    fieldset.appendChild(legend);
+    fieldset.appendChild(p1);
+    fieldset.appendChild(p2);
+    div.appendChild(fieldset);
 }
 
 /*function mostrarLenguajes(div,divTecnologias,divHabilidades,svgURL,arrayPorcentajeL,arrayLenguajes){
