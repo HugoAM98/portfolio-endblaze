@@ -1,7 +1,7 @@
 const contenedorPresentacion = document.getElementById("presentacion");
 const contenedorContenido = document.getElementById("contenido");
 const botones = document.getElementsByClassName("nav__item");
-const iconos = document.getElementsByTagName("i");
+const iconos = document.getElementsByClassName("navegacion");
 var contenido;
 
 gsap.from(".contenedor", {
@@ -61,10 +61,9 @@ function controladorContenido(contenido){
                 div2.appendChild(h1);
                 div.appendChild(div2);
                 div.appendChild(onda);
-                var arrayTituloVideos = ["Proyecto videojuego Zelda","Diseño de personaje - Luchador","Juego de plataformas 2D"];
-                var arraysubituloVideos = ["En Unity3D","En Blender","En Unity3D"];
-                var arrayUrlVideos = ["https://www.youtube.com/embed/nlWNzhVGhDA","https://www.youtube.com/embed/t-APJZeK2SM","https://www.youtube.com/embed/GbmRt0wydQU"]; //TODO: reemplazar por embed.
-                var arrayEnlaceDescarga = ["#"];
+                var arrayTituloVideos = ["Proyecto VR-PROJECT","Proyecto ARACHNIDMON","Videojuego DEMIGOD RISE"];
+                var arraysubituloVideos = ["En Unity3D","En Unity3D","En Unity3D"];
+                var arrayUrlVideos = ["https://www.youtube.com/embed/unYb4ytt4Ko","https://www.youtube.com/embed/-6pqVjbpR1w","https://www.youtube.com/embed/jFabxvsYSfY"]; //TODO: reemplazar por embed.
 
                 crearVideos(div,arrayTituloVideos,arraysubituloVideos,arrayUrlVideos);
             break;
@@ -105,12 +104,10 @@ function crearVideos(div,arrayTituloVideos,arraysubituloVideos,arrayUrlVideos){
         subtitulo.className = "titulo";
         titulo.textContent = arrayTituloVideos[i];
         subtitulo.textContent = arraysubituloVideos[i];
-        enlace.href = "#" //TODO: direccion de la descarga
-        enlace.textContent = "> Descarga la demo de los fuentes <"
+        
         div2.appendChild(titulo);
         div2.appendChild(subtitulo);
         div2.appendChild(iframe);
-        div2.appendChild(enlace);
         div.appendChild(div2);
         contenedorContenido.appendChild(div);
         }
@@ -147,7 +144,7 @@ function crearVideos(div,arrayTituloVideos,arraysubituloVideos,arrayUrlVideos){
 }
 
 function crearFormacion(div){
-    var arrayTitulacion = ["MasterD:","CFGS Informatica y Comunicaciones -","CFGS Informatica y Comunicaciones -","BAC -"];
+    var arrayTitulacion = ["MasterD:","CFGS Informatica y Comunicaciones ","CFGS Informatica y Comunicaciones ","BAC "];
     var arrayNombreTitulo = [" Programación con motores gráficos: Unity 3D.","Desarrollo de Aplicaciones Web.","Desarrollo de Aplicaciones Multiplataforma.","Modalidad de Ciencias."];
     var arrayFecha = ["2021 - 2022","2019 - 2020","2017 - 2019","2015 - 2017"];
     var divListas = document.createElement("div");
@@ -187,14 +184,14 @@ function crearFormacion(div){
 function crearHabilidades(div){
     //? Porcentajes
     var arrayPorcentajeL = [90,70,90,80,90];
-    var arrayPorcentajeE = [90,70,90,80,90];
+    var arrayPorcentajeE = [90,70,50];
     var arrayPorcentajeM = [90,70,90,80,90];
     var arrayPorcentajeBD = [90,70,90,80,90];
     //? Titulos
     var arrayEncabezado = ["Lenguajes de Programación","Entornos de Desarrollo","Lenguaje de Etiquetas","Bases de Datos"];
     //? Tecnologías
     var arrayLenguajes = ["c#","javascript","java","php","python"];
-    var arrayEntornos = ["Unity3D","Visual Studio","Blender","Android Studio"];
+    var arrayEntornos = ["Unity3D","Visual Studio","Android Studio"];
     var arrayMarcado = ["css","html","xml"];
     var arrayBD = ["MySQL","Oracle","MariaDB","SQLite","phpmyadmin"];
 
@@ -208,6 +205,7 @@ function crearHabilidades(div){
         var titulo1 = document.createElement("h1");
         var divTecnologias = document.createElement("div");
         titulo1.textContent = arrayEncabezado[y];
+        titulo1.className = "tituloT"
         divTecnologias.className = "tecnologias";
         divTecnologias.classList += " tecnologias" + y;
         divHabilidades.appendChild(titulo1);
@@ -257,22 +255,6 @@ function crearHabilidades(div){
                     divHabilidades.appendChild(divTecnologias);
                 }
                 div.appendChild(divHabilidades);
-                /*// ! animación cartas
-                const cartas = gsap.utils.toArray("h1");
-                cartas.forEach((carta,y) => {
-                gsap.from(".carta",{
-                    scrollTrigger: {
-                        scroller: contenedorContenido,
-                        trigger: carta,
-                        start: "0% 30%",
-                        end: "top 100%",
-                        markers: true,
-                    },
-                    duracion:2,
-                    opacity:0,
-                    left:-100
-                });
-            })*/
                 break;
             case 1:
                 //mostrarEntornos;
@@ -411,6 +393,35 @@ function crearHabilidades(div){
                 break;
         }
     }
+    //! animacion titulos habilidades:
+    const texto = gsap.utils.toArray(".tituloT");
+    texto.forEach((text,i) => {
+        gsap.to("tituloT",{
+            scrollTrigger: {
+                scroller: contenedorContenido,
+                trigger: text,
+                start: "top 80%",
+                end: "top 5%",
+                toggleClass: "textoT-active",
+                markers: false
+            },
+        })
+    })
+
+    //! animacion cartas:
+    const cartas = gsap.utils.toArray(".carta");
+    cartas.forEach((carta1,y) => {
+        gsap.to("carta",{
+            scrollTrigger: {
+                scroller: contenedorContenido,
+                trigger: carta1,
+                start: "top 90%",
+                end: "bottom 25%",
+                toggleClass:"carta-active",
+                markers: false
+            },
+        })
+    })
 }
 
 function crearExperiencia(div){

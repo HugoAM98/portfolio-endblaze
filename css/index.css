@@ -1,45 +1,37 @@
 /*! Fonts */
 
 @font-face {
-    font-family: "Sketch 3D";
-    src: url("/fonts/Sketch\ 3D.woff");
-}
-
-@font-face {
-    font-family: "Retro";
-    src: url("/fonts/RetroGaming.ttf");
-}
-
-@font-face {
-    font-family: "RobotoRegular";
-    src: url("/fonts/Roboto-Regular.ttf");
-}
-
-@font-face {
-    font-family: "RobotoLight";
-    src: url("/fonts/Roboto-Light.ttf");
+    font-family: "Poppins-Light";
+    src: url(/fonts/Poppins-Light.ttf);
 }
 
 *{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-family: "Poppins-Light";
 }
+html{
+    height: 100%;
+}
+
 body{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    background-image: url("../img/fondo.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-image: linear-gradient(#1F1D36 20%,#3F3351 80%);
 }
 
 /* ! main contenedor */
 
 /* todo: Estilos Contenedor Principal */
 
+.main__content{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
 .contenedor{
-    margin-top:7em;
+    margin-top:5em;
     width: 80%;
     height: 40em;
     display: flex;
@@ -59,9 +51,9 @@ body{
     align-items: center;
     width: 80px;
     height: 290px;
-    background-color: #fff;
+    background-color: #072b37;
     border-radius: 10px;
-    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.2);
 }
 
 .nav ul{
@@ -80,20 +72,20 @@ body{
     align-items: center;
     list-style: none;
     border-radius: 10px;
-    width: 70px;
+    width: auto;
     height: 60px;
 }
 
 .nav ul li a:hover{
-    background-color: rgb(163, 70, 224);
+    background-color: #ffffff;
     border-radius: 6px;
 }
 
 .nav ul li a{
     position: relative;
-    width: 100%;
+    width: auto;
     text-decoration: none;
-    color: rgb(163, 70, 224);
+    color: #48cfcb;
     font-weight: 500;
 }
 
@@ -107,8 +99,12 @@ body{
     transition: 0.8s;
 }
 
+.nav ul li a .copia{
+    display: none;
+}
+
 .nav ul li:hover a .icono{
-    color: #fff;
+    color: #1183bf;
 }
 
 .nav ul li a .icono .fas{
@@ -119,8 +115,9 @@ body{
 
 .nav ul li a .nav__item{
     position: absolute;
+    color: #1183bf;
     top: 0px;
-    left: 83px;
+    right: 70px;
     z-index: 111;
     background-color:#fff;
     width: auto;
@@ -136,7 +133,7 @@ body{
 }
 
 .nav ul li:hover a .nav__item{
-    transform: translateY(30%) translateX(10px);
+    transform: translateY(30%) translateX(-10px);
     visibility: visible;
     opacity: 1;
 }
@@ -145,7 +142,7 @@ body{
     content:"";
     position: absolute;
     top:44%;
-    left: -1px;
+    right: -10px;
     width: 12px;
     height: 12px;
     transform: rotate(45deg) translateX(-50%);
@@ -155,8 +152,8 @@ body{
 }
 
 .icon-active{
-    background-color: rgb(163, 70, 224);
-    color: #fff;
+    background-color: rgb(255, 255, 255);
+    color: #1183bf;
     border-radius: 6px;
 }
 
@@ -169,9 +166,10 @@ body{
     top: -1.5em;
     display: flex;
     align-items: center;
-    justify-content: start;
+    justify-content: center;
     flex-direction: column;
-    background-color: rgba(255, 255, 255, 0.774);
+    background-color: #072b37;
+    box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.2);
     height: 43em;
     width: 42em;
 }
@@ -211,13 +209,13 @@ body{
 .descripcion{
     text-align: center;
     margin-top: 5em;
-    color: rgb(6, 73, 56);
+    color: #48cfcb;
 }
 
 .descripcion h3{
     font-size: 1.2rem;
     margin: 5px;
-    color: rgb(17, 199, 153);
+    color: #48cfcb;
 }
 
 /* Todo: Estilos Social Liks */
@@ -237,21 +235,52 @@ body{
     align-items: center;
     justify-content: center;
     text-align: center;
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 2px 8px;
+    box-shadow: rgba(139, 138, 138, 0.25) 0px 6px 10px;
     width: 100%;
     height: 100%;
     font-size: 1.3em;
-    color: rgb(22, 24, 23);
+    color: rgb(255, 255, 255);
 }
 
 .social__link:hover{
     transition: 0.4s;
     color:rgb(9, 119, 106);
     font-size: 2em;
-    box-shadow: rgba(20, 30, 20, 0.55) 0px 2px 8px;
+    box-shadow: #48cfcb 0px 2px 8px;
     background-color: rgba(110, 255, 207, 0.664);
 }
 
+/* Todo: Estilos de Contactos */
+
+.contacto{
+    padding-top: 20px;
+    font-size: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+}
+
+.contacto span{
+    color: rgb(185, 185, 185);
+}
+/* ? Version mejorada 
+.contacto strong{
+    cursor: pointer;
+}
+
+.copiado{
+    opacity: 0;
+    background-color: #000;
+    width: auto;
+    height: auto;
+    color: #fff;
+}
+
+.copiado-active{
+    opacity: 1;
+}
+*/
 /* ! Contenedor Contenidos */
 
 /* Todo: Estilos Contenedor Contenidos */
@@ -259,7 +288,7 @@ body{
 .contenedor__contenido{
     width: 0em;
     height: 100%;
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(24, 23, 23);
     transition: width .5s;
     display: block;
     overflow-x: hidden;
@@ -268,6 +297,30 @@ body{
 .contenedor__contenido-active{
     width: 50em;
     transition: width 1s;
+}
+
+/* todo Scroll Estilos */
+
+.contenedor__contenido::-webkit-scrollbar {
+    -webkit-appearance: none;
+}
+
+.contenedor__contenido::-webkit-scrollbar:vertical {
+    width:10px;
+    height: 5px;
+}
+
+.contenedor__contenido::-webkit-scrollbar-button:increment,.contenedor__contenido::-webkit-scrollbar-button {
+    display: none;
+} 
+
+.contenedor__contenido::-webkit-scrollbar-thumb {
+    background-color: #31d9f0;
+    border-radius: 20px;
+}
+
+.contenedor__contenido::-webkit-scrollbar-track {
+    border-radius: 10px;  
 }
 
 /* ! Sección Proyectos */
@@ -281,10 +334,11 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: #072b37;
 }
 
 .proyectosCabecera{
-    background-color: rgb(6, 113, 235);
+    background-color: rgb(24, 23, 23);
     width: 100%;
     height: 14em;
     display: flex;
@@ -295,19 +349,10 @@ body{
 
 .proyectosCabecera > h1{
     text-align: left; 
-    font-family: "Sketch 3D"; 
     font-size: 60px; 
-    color: rgb(241, 43, 36); 
-    text-shadow: 0 1px 0 #ddd, 0 2px 0 #ccc, 0 3px 0 #bbb, 0 4px 0 #aaa, 0 5px 0 #acacac, 0 6px 1px rgba(0,0,0,0.1), 0 0 5px rgba(0,0,0,0.1), 0 1px 3px rgba(0,0,0,0.3), 0 3px 5px rgba(0,0,0,0.2), 0 5px 10px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.2), 0 20px 20px rgba(0,0,0,0.15);
+    color: #ffffff; 
 }
 
-.onda{
-    background-image: url("/img/wave.svg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 100%;
-    height: 9em;
-}
 
 .video{
     display: flex;
@@ -319,7 +364,6 @@ body{
 .video .titulo{
     position:relative;
     margin: 20px 0px 5px 8px;
-    color: rgb(19, 17, 17);
     font-size: 2.2em;
     padding: 0 10px;
     font-weight: 500;
@@ -327,8 +371,15 @@ body{
     transform: scaleX(0);
     transition: 1s;
     transition-delay: 0s;
-    font-family: "Retro";
     opacity: 0;
+}
+
+.video .titulo:nth-child(1){
+    color: #48cfcb;
+}
+
+.video .titulo:nth-child(2){
+    color: rgb(59, 146, 245);
 }
 
 .video .titulo-active{
@@ -351,11 +402,11 @@ body{
     height: 100%;
     transform-origin: right;
     transition: .5s;
-    background-color: rgb(241, 43, 36);
+    background-color: #48cfcb;
 }
 
 .video .titulo:nth-child(2)::before{
-    background-color: rgb(6, 113, 235);
+    background-color: rgb(59, 146, 245);
 }
 
 .video .titulo:nth-child(2){
@@ -365,7 +416,6 @@ body{
     font-size: 1.5em;
     letter-spacing: 2px;
     display: inline-block;
-    font-family: "Retro";
 }
 
 .video .iframe{
@@ -387,12 +437,12 @@ body{
 .video a{
     font-size: 30px;
     text-decoration: none;
-    color: rgb(6, 113, 235);
+    color: rgb(255, 255, 255);
     margin-bottom: 2em;
 }
 
 .video a:hover{
-    color: rgb(163, 70, 224);
+    color: #48cfcb;
 }
 
 /* ! Sección CV */
@@ -407,7 +457,7 @@ body{
     flex-direction: column;
     width: 100%;
     min-height: 50vh;
-    background-color: rgb(51, 47, 47);
+    background-color: rgb(24, 23, 23);
 }
 
 .divListas{
@@ -437,7 +487,7 @@ body{
     color: rgb(228, 243, 255);
     list-style: none;
     margin: 4px 0;
-    border-left: 5px solid rgb(45, 227, 243);
+    border-left: 5px solid #48cfcb;
     cursor: pointer;
     transition: 0.5s;
 }
@@ -447,7 +497,7 @@ body{
     position: absolute;
     width: 100%;
     height: 100%;
-    background-color: rgb(45, 227, 243);
+    background-color: #48cfcb;
     transform: scaleX(0);
     transform-origin: left;
     z-index: 1;
@@ -486,6 +536,7 @@ body{
 
 .habilidades{
     padding-top: 3em;
+    background-color: #072b37;
 }
 
 .habilidades h1{
@@ -494,10 +545,10 @@ body{
     font-weight: 500;
     letter-spacing: 2px;
     font-size: 30px;
+    color: #ffffff;
 }
 
 .tecnologias{
-
     position: relative;
     padding: 30px;
     width: 100%;
@@ -526,6 +577,7 @@ body{
     overflow: hidden;
     margin-bottom: 40px;
     transition: 0.5s;
+    opacity: 1;
 }
 
 .tecnologias .carta:hover{
@@ -543,6 +595,10 @@ body{
     background-color: rgba(255, 255, 255,.3);
     pointer-events: none;
     z-index: 1;
+}
+
+.textoT-active{
+    opacity: 1;
 }
 
 .porcentaje{
@@ -576,7 +632,7 @@ body{
 
 .carta:hover .porcentaje .numero h2{
     color: rgb(255, 255, 255);
-    font-size: 60px;
+    font-size: 50px;
 }
 
 .porcentaje .numero h2 span{
@@ -593,7 +649,7 @@ body{
     position: relative;
     color: rgb(163, 163, 163);
     margin-top: 20px;
-    font-size: 18px;
+    font-size: 15px;
     letter-spacing: 1px;
     text-transform: uppercase;
     transition: 0.5s;
@@ -601,7 +657,7 @@ body{
 
 .carta:hover .texto{
     color: rgb(255, 255, 255);
-    font-size: 25px;
+    font-size: 18px;
 }
 
 svg{
@@ -626,89 +682,68 @@ svg circle:nth-child(2){
     stroke-dashoffset: 440;
 }
 
+.tecnologias .carta svg circle:nth-child(2){
+    stroke: #31d9f0;
+}
+
 .tecnologias0 .carta:nth-child(1) svg circle:nth-child(2){
     stroke-dashoffset: calc(440 - (440 * 90) / 100);
-    stroke: rgb(255, 251, 0);
 }
 
 .tecnologias0 .carta:nth-child(2) svg circle:nth-child(2){
     stroke-dashoffset: calc(440 - (440 * 70) / 100);
-    stroke: rgb(38, 255, 0);
 }
 
 .tecnologias0 .carta:nth-child(3) svg circle:nth-child(2){
-    stroke-dashoffset: calc(440 - (440 * 90) / 100);
-    stroke: rgb(255, 0, 0);
-}
-
-.tecnologias0 .carta:nth-child(4) svg circle:nth-child(2){
-    stroke-dashoffset: calc(440 - (440 * 80) / 100);
-    stroke: rgb(255, 0, 242);
-}
-
-.tecnologias0 .carta:nth-child(5) svg circle:nth-child(2){
-    stroke-dashoffset: calc(440 - (440 * 90) / 100);
-    stroke: rgb(35, 246, 246);
+    stroke-dashoffset: calc(440 - (440 * 50) / 100);
 }
 
 .tecnologias1 .carta:nth-child(1) svg circle:nth-child(2){
     stroke-dashoffset: calc(440 - (440 * 90) / 100);
-    stroke: rgb(255, 251, 0);
 }
 
 .tecnologias1 .carta:nth-child(2) svg circle:nth-child(2){
     stroke-dashoffset: calc(440 - (440 * 70) / 100);
-    stroke: rgb(38, 255, 0);
 }
 
 .tecnologias1 .carta:nth-child(3) svg circle:nth-child(2){
     stroke-dashoffset: calc(440 - (440 * 90) / 100);
-    stroke: rgb(255, 0, 0);
 }
 
 .tecnologias1 .carta:nth-child(4) svg circle:nth-child(2){
     stroke-dashoffset: calc(440 - (440 * 80) / 100);
-    stroke: rgb(255, 0, 242);
 }
 
 .tecnologias2 .carta:nth-child(1) svg circle:nth-child(2){
     stroke-dashoffset: calc(440 - (440 * 90) / 100);
-    stroke: rgb(255, 251, 0);
 }
 
 .tecnologias2 .carta:nth-child(2) svg circle:nth-child(2){
     stroke-dashoffset: calc(440 - (440 * 70) / 100);
-    stroke: rgb(38, 255, 0);
 }
 
 .tecnologias2 .carta:nth-child(3) svg circle:nth-child(2){
     stroke-dashoffset: calc(440 - (440 * 90) / 100);
-    stroke: rgb(255, 0, 0);
 }
 
 .tecnologias3 .carta:nth-child(1) svg circle:nth-child(2){
     stroke-dashoffset: calc(440 - (440 * 90) / 100);
-    stroke: rgb(255, 251, 0);
 }
 
 .tecnologias3 .carta:nth-child(2) svg circle:nth-child(2){
     stroke-dashoffset: calc(440 - (440 * 70) / 100);
-    stroke: rgb(38, 255, 0);
 }
 
 .tecnologias3 .carta:nth-child(3) svg circle:nth-child(2){
     stroke-dashoffset: calc(440 - (440 * 90) / 100);
-    stroke: rgb(255, 0, 0);
 }
 
 .tecnologias3 .carta:nth-child(4) svg circle:nth-child(2){
     stroke-dashoffset: calc(440 - (440 * 80) / 100);
-    stroke: rgb(255, 0, 242);
 }
 
 .tecnologias3 .carta:nth-child(5) svg circle:nth-child(2){
     stroke-dashoffset: calc(440 - (440 * 90) / 100);
-    stroke: rgb(35, 246, 246);
 }
 
 /* todo: estilos experiencia */
@@ -721,7 +756,7 @@ svg circle:nth-child(2){
 }
 
 .experiencia{
-    background-color: rgb(51, 47, 47);
+    background-color: rgb(24, 23, 23);
 }
 
 .experiencia h1{
@@ -736,7 +771,6 @@ svg circle:nth-child(2){
 }
 
 .experiencia h2{
-    font-family: "RobotoLight";
     color: #fff;
     font-size: 20px;
     margin-top: 30px;
@@ -747,7 +781,6 @@ svg circle:nth-child(2){
     list-style-type: circle;
     margin-top: 15px 0 0 10px;
     font-size: 18px;
-    font-family: "RobotoLight";
     color: #fff;
 }
 
@@ -760,6 +793,381 @@ svg circle:nth-child(2){
 
 /* ! Contenedor Sobre Mi */
 
-/* todo: */
+/* todo: Estilos sobre mi */
 
+.about{
+    background-color: rgb(24, 23, 23);
+    color: #fff;
+    padding-bottom: 60px;
+    padding-top: 40px;
+    width: 100%;
+    min-height: 100%;
+    max-height: auto;
+}
 
+.about fieldset{
+    display: flex;
+    background-color: rgb(32, 31, 31);
+    justify-content: start;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    height: auto;
+    width: auto;
+    margin: 0px 30px 0px 30px;
+    overflow-x: hidden;
+    border-color: #31d9f0;
+}
+
+fieldset p{
+    margin: 20px 100px 30px 100px;
+    height:auto;
+    font-size: 1.5rem;
+    text-align: justify;
+}
+
+legend h1{
+    color: #31d9f0;
+}
+
+/*! eliminar publicidad*/
+
+img[alt="www.000webhost.com"]{
+    display: none;
+}
+
+/* 
+---------------------------------------------
+.autor
+--------------------------------------------- 
+*/
+
+footer {
+    text-align: center;
+    margin: 4em 0px 30px 0px;
+}
+
+footer p {
+    color: #fff;
+    font-size: 13px;
+}
+
+footer p a {
+    cursor: pointer;
+    color: #31d9f0;
+    text-decoration: none;
+}
+
+footer p a:hover {
+    color: #31d9f0;
+}
+
+/* ! Version tablet */
+
+@media (max-width: 1737px) { 
+    .nav{
+        position: absolute;
+        top: 6%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        margin: 0;
+        padding: 20px 0;
+        border-radius: 10px;
+        box-shadow: 0 10px 30px rgba(255, 255, 255, 0.3);
+        z-index: 11111;
+        width: 25em;
+        height: 4em;
+    }
+
+    .nav ul{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .nav ul li{
+        list-style: none;
+        text-align: center;
+        display: block;
+    }
+
+    nav ul li:first-child{
+        border-right:none;
+    }
+
+    .nav ul li a{
+        display: block;
+        background-color: transparent;
+    }
+
+    .nav ul li a .copia{
+        display: block;
+    }
+
+    .nav ul li a .icono{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: start;
+        text-align: center;
+        overflow: hidden;
+        height: 50px;
+        margin: 0 auto 10px;
+        border-radius: 10px;
+        background-color: #072b37;
+    }
+
+    .nav ul li a .icono .fas{
+        line-height: 20px;
+        font-size: 26px;
+        transition: 0.5s;
+        color: #48cfcb;
+    }
+    .nav ul li a:hover .icono .fas{
+        transform: translateY(-100%);
+    }
+
+    .nav ul li a:hover .icono .fas:last-child{
+        color: #ffffff;
+    }
+
+    .nav ul li a .nav__item{
+        position: relative;
+        height: auto;
+        right: 0;
+        width: 100%;
+        display: block;
+        line-height: 20px;
+        transition: 0.5s;
+    }
+
+    .nav ul li a .nav__item::before{
+        content: none;
+    }
+
+    .nav ul li a:hover .nav__item{
+        transform: translateY(0px);
+    }
+
+    .nav ul li a:hover{
+        background-color: transparent;
+    }
+
+    .icon-active .nav__item{
+        opacity: 1 !important;
+        visibility: visible !important;
+    }
+}
+
+/* ! Version ipad */
+@media (max-width: 1410px) {
+
+    .contenedor__presentacion{
+        width: 42em;
+    }
+
+    .contenedor__contenido-active,.contenedor__contenido{
+        position: absolute;
+        z-index: 111;
+    }
+
+    .contenedor__contenido{
+        height: 0em;
+        width: 42em;
+    }
+    
+    .contenedor__contenido-active{
+        height: 43em;
+        width: 42em;
+        /*transition: 1s;*/
+    }
+
+    .proyectosCabecera{
+        height: 13em;
+    }
+
+    .proyectosCabecera h1{
+        font-size: 30px;
+    }
+
+    .habilidades .tituloT{
+        transition: 1s;
+        position: relative;
+        left: -200px;
+        opacity: 0;
+    }
+    
+    .habilidades .textoT-active{
+        opacity: 1;
+        left: 0;
+    }
+
+    .tecnologias .carta{
+        opacity: 0;
+        top: 200px;
+    }
+
+    .tecnologias .carta-active{
+        top: 0;
+        opacity: 1;
+    }
+}
+
+/* ! Version móvil */
+@media (max-width: 699px) {
+
+    .contenedor{
+        width: 100% !important;
+        height: 100%;
+        margin-top: 8em;
+    }
+
+    .contenedor__presentacion{
+        width: 100% !important;
+    }
+
+    .contenedor__contenido{
+        width: 100% !important;
+    }
+
+    .contenedor__contenido-active{
+        width: 100% !important;
+        height: 100%;
+    }
+    
+    .proyectosCabecera{
+        height: 12em;
+    }
+    
+    .proyectosCabecera > h1{
+        font-size: 50px; 
+    }
+    
+    
+    .video .titulo{
+        font-size: 1.5em;
+    }
+
+    .nav{
+        margin-top: 3em;
+        width: 100%;
+    }
+    
+    .video .titulo:nth-child(2){
+        font-weight: 200;
+        font-size: 1.3em;
+        letter-spacing: 1px;
+    }
+
+    .video .iframe{
+        width: 25em;
+    }
+    
+    .video a{
+        font-size: 22px;
+    }
+    
+    
+    .divListas{
+        width: 20em;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .formacion h1{
+        margin-top: 2em;
+        font-weight: 500;
+        letter-spacing: 2px;
+        font-size: 20px;
+    }
+    
+    .divListas strong{
+        color: #fff;
+        font-size: 16px;
+    }
+
+    .divListas ul li span{
+        font-size: 16px;
+    }
+    
+    .habilidades h1{
+        font-size: 28px;
+    }
+    
+    .tecnologias{
+        position: relative;
+        padding: 30px;
+        width: 100%;
+    }
+    
+    .tecnologias .carta{
+        width: 230px;
+        height: 260px;
+    }
+    
+    .porcentaje .numero h2{
+        font-size: 28px;
+    }
+    
+    .carta:hover .porcentaje .numero h2{
+        font-size: 35px;
+    }
+    
+    .porcentaje .numero h2 span{
+        font-size: 19px;
+    }
+    
+    .texto{
+        font-size: 14px;
+    }
+    
+    .carta:hover .texto{
+        font-size: 17px;
+    }
+    
+    .experiencia h1{
+        font-size: 25px;
+    }
+    .experiencia h2{
+        color: #fff;
+        font-size: 17px;
+        margin-top: 20px;
+    }
+    
+    .experiencia ul{
+        width: 20em;
+    }
+
+    .experiencia li{
+        list-style: none;
+        list-style-type: circle;
+        font-size: 15px;
+        color: #fff;
+    }
+    
+    .experiencia a{
+        color: aqua;
+        text-decoration: none;
+        margin-bottom: 30px;
+        font-size: 25px;
+    }
+
+    .about{
+        padding: 40px 10px 40px 10px;
+    }
+    
+    fieldset p{
+        margin: 20px 40px 30px 40px;
+        height:auto;
+        font-size: 1rem;
+        text-align: justify;
+    }
+
+    legend h1{
+        font-size: 25px;
+        margin-left: 20px;
+    }
+
+    .contacto{
+        font-size: 18px;
+    }
+}

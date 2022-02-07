@@ -4,62 +4,91 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Porfolio web Desarrollador de videojuegos">
+    <meta name="author" content="ProtoxKing">
+
+    <!-- OG Meta Tags to improve the way the post looks when you share the page on LinkedIn, Facebook, Google+ -->
+	<meta property="og:site_name" content="endfolio" /> <!-- website name -->
+	<meta property="og:site" content="endfolio" /> <!-- website link -->
+	<meta property="og:title" content="Pablo Falcon Padron"/> <!-- title shown in the actual shared post -->
+	<meta property="og:description" content="Personal porfolio videogame developer porfolio personal Desarrollador de videojuegos" /> <!-- description shown in the actual shared post -->
+	<meta property="og:image" content="../img/presentacionCabecera.jpg" /> <!-- image link, make sure it's jpg -->
+	<meta property="og:url" content="https://endfolio.com" /> <!-- where do you want your post to link to -->
+	<meta property="og:type" content="article" />
+
     <link rel="stylesheet" href="css/index.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Favicon  -->
+    <link rel="icon" href="img/img.jpeg">
+    
+
     <!-- CDN Iconos de Fonts Awesome  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
-    <title>Porfolio Web</title>
+    <title>Pablo Falcón Padrón</title>
 </head>
 <body>
-    <div class="contenedor">
-        <div class="nav">
-            <ul>
-                <li>
-                    <a href="#" id="proyectos">
-                        <span class="icono"><i class="fas fa-tasks"></i></span>
-                        <span class="nav__item">Proyectos</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#" id="CV">
-                        <span class="icono"><i class="fas fa-id-card-alt"></i></span>
-                        <span class="nav__item">CV</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#" id="">
-                        <span class="icono"><i class="fas fa-user-alt"></i></span>
-                        <span class="nav__item">Sobre Mi</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <span class="icono"><i class="fas fa-mail-bulk"></i></span>
-                        <span class="nav__item">Contacto</span>
-                    </a>
-                </li>
-            </ul>
-        </div>
-        <div class="contenedor__presentacion" id="presentacion">
-            <div class="contenedor__presentacion__img"></div><!-- contenedor para la imagen de fondo -->
-            <div class="contenedor__foto"></div><!-- contenedor para la poto de perfil -->
-            <div class="descripcion">
-                <h1>Pablo Falcón Padrón</h1>
-                <h3>Desarrollador de Videojuegos</h3>
-                <div class="social">
-                    <a href="" class="social__link"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="" class="social__link"><i class="fab fa-github"></i></a>
-                    <a href="" class="social__link"><i class="far fa-envelope"></i></a>
-                    <a href="" class="social__link"><i class="fab fa-youtube"></i></a>
+    <div class="main__content">
+        <div class="contenedor">
+            <div class="nav">
+                <ul>
+                    <li>
+                        <a href="#" id="proyectos" class="navegacion">
+                            <span class="icono">
+                                <i class="fas fa-tasks"></i>
+                                <i class="fas fa-tasks copia"></i>
+                            </span>
+                            <span class="nav__item" data-text="Proyectos">Proyectos</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" id="CV" class="navegacion">
+                            <span class="icono">
+                                <i class="fas fa-id-card-alt"></i>
+                                <i class="fas fa-id-card-alt copia"></i>
+                            </span>
+                            <span class="nav__item">CV</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" id="sobreMe" class="navegacion">
+                            <span class="icono">
+                                <i class="fas fa-user-alt"></i>
+                                <i class="fas fa-user-alt copia" ></i>
+                            </span>
+                            <span class="nav__item">Conóceme</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="contenedor__presentacion" id="presentacion">
+                <div class="contenedor__presentacion__img"></div><!-- contenedor para la imagen de fondo -->
+                <div class="contenedor__foto"></div><!-- contenedor para la poto de perfil -->
+                <div class="descripcion">
+                    <h1>Pablo Falcón Padrón</h1>
+                    <h3>Desarrollador de Videojuegos</h3>
+                    <div class="social">
+                        <a href="https://www.linkedin.com/in/pablo-falc%C3%B3n-padr%C3%B3n-aa11b6196/" class="social__link"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://github.com/Endblaze" class="social__link"><i class="fab fa-github"></i></a>
+                        <a href="https://www.youtube.com/channel/UCun62Px0BTeO3pqjeHENLrw" class="social__link"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="contacto">
+                    <!--<div class="copiado">¡Copiado!</div>-->
+                    <span>Correo:<strong>pablofalconpadron@gmail.com</strong></span>
+                    <span>Teléfono:<strong>+34 615 39 06 74</strong></span>
                 </div>
             </div>
-        </div>
-        <div class="contenedor__contenido" id="contenido">
-            
+            <div class="contenedor__contenido" id="contenido"></div>
         </div>
     </div>
+    <footer>
+        <p>Copyright &copy; 2021 Endfolio - Designed by <a href="https://github.com/HugoAM98">HugoAM98</a></p>
+    </footer>
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/ScrollTrigger.min.js"></script>
