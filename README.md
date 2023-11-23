@@ -1,4 +1,4 @@
-# Porfolio_de_Endblaze
+# Enblaze portfolio
 This portfolio was created for my friend endblaze. Developed in pure JS. A videogame developer portfolio on one page.
 
 It consists of a simple navigation bar with 3 buttons that dynamically change the content of the page. 
